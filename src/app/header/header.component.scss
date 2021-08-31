@@ -1,0 +1,21 @@
+@import "../../palette";
+.bg-header {
+  background-color: $primary-color-dark;
+}
+
+.nav-item {
+  padding: 0px 5px;
+
+  .active {
+    background-color: $primary-color-light;
+    color: $primary-text-color
+  }
+  button {
+    color: $primary-color-text;
+  }
+
+  button:hover{
+    background-color: rgba(0, 0, 0, 0.35);
+    color: $primary-color-text
+  }
+}

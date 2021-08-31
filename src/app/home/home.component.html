@@ -1,0 +1,20 @@
+<h3 class="text-center m-3 title-text">Today's record</h3>
+<hr>
+<!--<emoji-mart [style] title="Pick an emoji" [emojiTooltip]="false" set="google" (emojiClick)="addEmoji($event)"></emoji-mart>-->
+<!--<ngx-emoji [isNative]="true" [emoji]="selectedEmoji" [size]="128"></ngx-emoji>-->
+<app-diary *ngIf="selectedStory; else noStoryToday" [title]="selectedStory.title" [emoji]="selectedStory.emoji" [date]="selectedStory.date" [text]="selectedStory.text" [id]="selectedStory.id"></app-diary>
+
+<hr>
+<button (click)="onClick()">open</button>
+<button (click)="dispatch()">dispatch</button>
+<button (click)="printStories()">Print stories</button>
+
+<ng-template #noStoryToday>
+<!--  <h4 class="text-center">Nincs mára story</h4>-->
+  <div class="card add-button" (click)="onAddClick()">
+    <div class="card-body text-center">
+      <i class="fas fa-plus fa-4x"></i>
+    </div>
+  </div>
+
+</ng-template>

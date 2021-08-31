@@ -1,0 +1,42 @@
+<app-modal #modal [modalConfig]="modalConfig">
+  <div class="modal-body">
+    <form id="editForm" #inputform="ngForm">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="title"id="floatingInput" placeholder="Title" [(ngModel)]="title">
+        <label for="floatingInput">Title</label>
+      </div>
+      <div class="mb-3">
+        <input type="date" id="date" name="date" class="form-control" [ngModel]="currentDate |date:'yyyy-MM-dd'"/>
+      </div>
+      <div class="form-floating">
+        <textarea class="form-control" name="content" placeholder="Leave your story here" id="floatingTextarea" [(ngModel)]="content"></textarea>
+        <label for="floatingTextarea">Comments</label>
+      </div>
+      <div class="mb-3 emoji-class">
+        <div>
+          <a style="cursor:pointer;" (click)="toggleEmojiMart()">
+            <ngx-emoji [isNative]="true" [emoji]="selectedEmoji" [size]="32"></ngx-emoji>
+          </a>
+          <br>
+          Select an emoji for your story
+        </div>
+        <emoji-mart [@inOutAnimation] *ngIf="emojiMartOpen" title="Pick an emoji" [emojiTooltip]="false" set="google"
+                    (emojiClick)="addEmoji($event)"></emoji-mart>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button"
+            class="btn btn-outline-secondary"
+            (click)="onDismiss()">
+      Close
+    </button>
+    <button type="button"
+            class="btn btn-outline-primary"
+            (click)="onClose()">
+      Save
+    </button>
+  </div>
+</app-modal>
+
+

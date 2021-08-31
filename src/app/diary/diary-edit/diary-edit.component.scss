@@ -1,0 +1,15 @@
+textarea{
+  min-height: 100px;
+}
+
+.emoji-class{
+  margin-top: 10px;
+  text-align: center;
+}
+
+::ng-deep emoji-mart{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  transition: ease 1s;
+}

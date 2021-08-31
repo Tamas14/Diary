@@ -1,0 +1,17 @@
+@import "../../palette";
+@import "src/palette";
+
+
+.title-text{
+  color: $primary-text-color;
+}
+
+.add-button {
+  background-color: $primary-color-light;
+  transition: ease 0.2s;
+}
+
+.add-button:hover{
+  background-color: $primary-color;
+  color: white;
+}

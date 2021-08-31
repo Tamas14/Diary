@@ -1,0 +1,9 @@
+@import 'palette.scss';
+
+body{
+  background-color: $primary-color-light;
+  font-family: Roboto;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

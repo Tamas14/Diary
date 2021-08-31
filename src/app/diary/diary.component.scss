@@ -1,0 +1,8 @@
+@import '../../palette';
+
+.card{
+  background-color: $primary-light-background;
+  color: $primary-text-color;
+
+  box-shadow: #6c6c6c 0px 0px 5px;
+}

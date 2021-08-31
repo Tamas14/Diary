@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">
+      <ngx-emoji [isNative]="true" [emoji]="!emoji ? 'grin' : emoji" [size]="64"></ngx-emoji>
+      <h5 style="display: inline; width: fit-content">{{title}}</h5>
+    </div>
+    <h6 class="card-subtitle mb-2 text-muted">{{date | date:'yyyy-MM-dd'}}</h6>
+    <p class="card-text">
+      {{text}}
+    </p>
+    <a style="cursor:pointer;" (click)="onEditStory(id)"><button class="btn btn-primary">Edit</button></a>
+  </div>
+</div>
